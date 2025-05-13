@@ -10,12 +10,12 @@ from qutip import sigmax, sigmay, sigmaz, qeye, tensor, qzero, commutator
 from spin_data import L2_norm, spin_chain_data, generate_SWAP_operators
 
 # Add the LaTeX binary location to the PATH
-os.environ['PATH'] += os.pathsep + '/Library/TeX/texbin'
+# os.environ['PATH'] += os.pathsep + '/Library/TeX/texbin'
 
 # Enable LaTeX text rendering in Matplotlib
-matplotlib.rcParams['text.usetex'] = True
-matplotlib.rcParams['font.family'] = 'serif'
-matplotlib.rcParams['font.serif'] = ['Computer Modern']
+# matplotlib.rcParams['text.usetex'] = True
+# matplotlib.rcParams['font.family'] = 'serif'
+# matplotlib.rcParams['font.serif'] = ['Computer Modern']
 
 # Useful for running matplotlib on high-dpi displays
 # %config InlineBackend.figure_format='retina'
