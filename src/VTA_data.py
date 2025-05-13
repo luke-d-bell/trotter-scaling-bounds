@@ -207,14 +207,20 @@ def plot_error_bounds(N_qubits, Jx, Jy, Jz, periodic_bc, tolerance, α_start, α
     
     # plot || R(α) - P(α)||_2
     ax.plot(α_array, ϵ_array, \
-            label= fr'$\epsilon_{N_qubits}(\alpha) $', linestyle = 'solid', color='blue')
+            label= f'Empirical_{N_qubits}', linestyle = 'solid', color='blue')
+    
+    # optional labeling using LaTeX font
+    #$\epsilon_{N_qubits}(\alpha)$ 
 
     # Plot analytically-derived error bounds
     ax.plot(α_array, B_array, \
-            label= fr' $ \mathcal{{B}}_{N_qubits}(\alpha) $', linestyle='--', color= 'red')
+            label= f'Bounds_{N_qubits}', linestyle='--', color= 'red')
+    
+    # optional labeling using LaTeX font
+    # fr' $ \mathcal{{B}}_{N_qubits}(\alpha) $'
     
     # add axes, labels, gridlines, tickmarks, and legend to the plot
-    ax.set_xlabel(r'$\alpha$', fontsize = 20)
+    ax.set_xlabel(r'$t$', fontsize = 20)
     ax.set_ylabel(r'Error Bounds', fontsize = 20)
     ax.grid(color='gray', linestyle='--', linewidth=0.5, alpha=0.3)
     ax.tick_params(axis='both', length=5, width=1, labelsize = 15)
